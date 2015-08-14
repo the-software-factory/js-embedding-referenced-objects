@@ -1,0 +1,21 @@
+<html ng-app="vnd.api-resource">
+<head>
+    <title>Nested objects dependency injection test</title>
+</head>
+<body ng-controller="exampleCtrl">
+    <pre>
+        <h3>Initial object</h3>
+        {{ initialObject }}
+
+        <h3>Dependency chain</h3>
+        {{ dependencyChain }}
+
+        <h3>Final object</h3>
+        {{ finalObject }}
+    </pre>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="../src/nestedEntitiesTransformer.js"></script>
+</body>
+</html>

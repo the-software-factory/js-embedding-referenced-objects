@@ -1,0 +1,23 @@
+{
+  "name": "js-embedding-referenced-objects",
+  "version": "0.1.0",
+  "description": "Nested objects embedder",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-software-factory/js-embedding-referenced-objects.git"
+  },
+  "author": "",
+  "contributors": {
+    "name": "Alexei Liulin",
+    "email": "codwizard@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-software-factory/js-embedding-referenced-objects/issues"
+  },
+  "homepage": "https://github.com/the-software-factory/js-embedding-referenced-objects#readme"
+}
