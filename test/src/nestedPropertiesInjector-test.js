@@ -121,26 +121,28 @@ describe("Test nested transformer", function() {
                 events: [{eventID: "a", venueID: "b"}],
                 venues: [{venueID: "b"}],
                 tickets:  [
-                    { ticketID: 1, packageID: "d", test1Id: "0", test2Id: "0",
-                    test1: { id: "0", data: "test1 data one", test2Id: "0" },
-                    test2: { id: "0", data: "test2 data", test1Id: "1" },
-                    package: {packageID: "d"}
-                },
-                { ticketID: 2, packageID: "d", test1Id: "1", test2Id: "0",
-                test1: { id: "1", data: "test1 data two", test2Id: "0" },
-                test2: { id: "0", data: "test2 data", test1Id: "1" },
-                package: {packageID: "d"}
+                    {
+                        ticketID: 1, packageID: "d", test1Id: "0", test2Id: "0",
+                        test1: { id: "0", data: "test1 data one", test2Id: "0" },
+                        test2: { id: "0", data: "test2 data", test1Id: "1" },
+                        package: {packageID: "d"}
+                    },
+                    {
+                        ticketID: 2, packageID: "d", test1Id: "1", test2Id: "0",
+                        test1: { id: "1", data: "test1 data two", test2Id: "0" },
+                        test2: { id: "0", data: "test2 data", test1Id: "1" },
+                        package: {packageID: "d"}
+                    }
+                ],
+                packages: [ {packageID: "d"} ],
+                test1: [
+                    { id: "0", data: "test1 data one", test2Id: "0" },
+                    { id: "1", data: "test1 data two", test2Id: "0" }
+                ],
+                test2: [ { id: "0", data: "test2 data", test1Id: "1" } ]
             }
-        ],
-        packages: [ {packageID: "d"} ],
-        test1: [
-            { id: "0", data: "test1 data one", test2Id: "0" },
-            { id: "1", data: "test1 data two", test2Id: "0" }
-        ],
-        test2: [ { id: "0", data: "test2 data", test1Id: "1" } ]
-    }
-}
-};
+        }
+    };
 
 
     beforeEach(module("vnd.api-resource"));

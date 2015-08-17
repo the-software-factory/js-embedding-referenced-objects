@@ -73,7 +73,7 @@ angular.module("vnd.api-resource")
     ];
 
 /*
-// Dependencues chain with dependencies in random order
+// Dependencies chain with dependencies in random order
 var dependenciesChain = [
     {
         sourcePath: "events",
