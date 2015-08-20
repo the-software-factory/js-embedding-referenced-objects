@@ -1,13 +1,13 @@
 {
   "name": "inject-nested-objects-test",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Test suite",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "angular": "^1.4.4",
     "angular-mocks": "^1.4.4",

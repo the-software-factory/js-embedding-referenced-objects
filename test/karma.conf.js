@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Fri Aug 14 2015 10:35:03 GMT+0200 (CEST)
+// Generated on Thu Aug 20 2015 11:15:12 GMT+0200 (CEST)
 
 module.exports = function(config) {
   config.set({
@@ -15,10 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/node_modules/angular/angular.min.js',
-      'test/node_modules/angular-mocks/angular-mocks.js',
-      'test/src/nestedPropertiesInjector-test.js',
-      'src/nestedEntitiesTransformer.js'
+        'test/node_modules/angular/angular.min.js',
+        'test/node_modules/angular-mocks/angular-mocks.js',
+        'test/src/*-test.js',
+        'src/nestedEntitiesTransformer.js'
     ],
 
 

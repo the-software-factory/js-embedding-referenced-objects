@@ -14,7 +14,7 @@ angular.module('vnd.api-resource')
      *
      * A factory used to build a service which transforms a json object inserting objects'
      * references inside referencing objects using a declarative approach. The function needs as input a
-     * dependency chain array and the object to manipulate. The dependencies in the chain can be placed
+     * dependencies chain array and the object to manipulate. The dependencies in the chain can be placed
      * in any order; for instance, if you want to nest F into D, G into D, D into C and C into B,
      * all the following chains are valid and will produce the same result:
      * F->D, G->D, D->C, C->B
@@ -50,7 +50,7 @@ angular.module('vnd.api-resource')
      * 		tickets: [
      * 			 { owner: "Bob", perfId: "0" },
      * 			 { owner: "Sam", perfIf: "1" },
-     * 			 { ownser: "Sally", perId: "0" }
+     * 			 { ownser: "Sally", perfId: "0" }
      * 		],
      * 		performances: [
      * 			{ id: "0", info: "Performance One" },
@@ -66,7 +66,7 @@ angular.module('vnd.api-resource')
      * 		tickets: [
      * 			{ owner: "Bob", perfId: "0", performance: { id: "0", info: "Performance One" }  },
      * 	 		{ owner: "Sam", perfIf: "1", performance: { id: "1", info: "Performance Two" } },
-     * 		    { ownser: "Sally", perId: "0", performance: { id: "0", info: "Performance One" } }
+     * 		    { ownser: "Sally", perfId: "0", performance: { id: "0", info: "Performance One" } }
      * 		],
      * 		performances: [
      * 			{ id: "0", info: "Performance One" },
@@ -82,7 +82,7 @@ angular.module('vnd.api-resource')
      *  	sourcePath: "content.performances",
      *   	sourceID: "id",
      *   	destinationPath: "content.tickets",
-     *   	destinationID: "perId",
+     *   	destinationID: "perfId",
      *   	destinationKeyName: "performance"
      * 	}
      * ]
@@ -116,7 +116,8 @@ angular.module('vnd.api-resource')
             }
 
             if (prop.length === 1 && value !== undefined) {
-                return obj[prop[0]] = value;
+                obj[prop[0]] = value;
+                return obj[prop[0]];
             }
             else if (prop.length === 0) {
                 return obj;
@@ -151,7 +152,7 @@ angular.module('vnd.api-resource')
         }
 
         /**
-         * Checks dependency's data types and call the nesting function
+         * Checks dependency's data types and calls the nesting function
          *
          * @param  {Object} dependency Object holding the dependency nesting configuration
          */
@@ -180,5 +181,5 @@ angular.module('vnd.api-resource')
         dependenciesChain.forEach(forEachDependency);
 
         return objectCopy;
-    }
+    };
 });
