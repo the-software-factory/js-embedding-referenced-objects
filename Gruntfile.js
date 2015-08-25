@@ -56,15 +56,7 @@ module.exports = function(grunt) {
             options: {
                 changelogOpts: {
                     preset: 'jshint',
-                    transform: function(commit, cb) {
-                        // Link commit hash to commit page on GitHub
-                        commit.shortDesc += " [" + commit.hash.slice(0, 7) +
-                        "](https://github.com/the-software-factory/js-object-keys-mapper/commit/" + commit.hash + ")";
-                        // Remove the short hash (as we added one in the link)
-                        delete commit.hash;
-
-                        cb(null, commit);
-                    }
+                    releaseCount: 0
                 }
             },
             release: {
