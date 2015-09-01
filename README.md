@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/the-software-factory/js-embedding-referenced-objects.svg?branch=master)](https://travis-ci.org/the-software-factory/js-embedding-referenced-objects)
+
 # JS Embedding Referenced Objects
 JS Embedding Referenced Objects is an AngularJS module providing a factory for embedding referenced objects
 into referencing ones by adding JS object references. For instance, if you have a ticket object that
